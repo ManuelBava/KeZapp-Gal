@@ -10,7 +10,7 @@ import it.sirifn.kezappgal.dto.InviaMessaggioDto;
 import it.sirifn.kezappgal.dto.RichiediMessaggioDto;
 import it.sirifn.kezappgal.dto.RichiediRegistrazioneDto;
 
-public interface kezappService {
+public interface KezappService {
 
    RichiediRegistrazioneDto registrazione(RichiediRegistrazioneDto rrdto);
    
