@@ -6,6 +6,7 @@
 package it.sirifn.kezappgal.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import org.springframework.data.annotation.Id;
 
@@ -13,6 +14,7 @@ import org.springframework.data.annotation.Id;
  *
  * @author manue
  */
+@Entity
 public class Messaggio {
     @Id
     @GeneratedValue
