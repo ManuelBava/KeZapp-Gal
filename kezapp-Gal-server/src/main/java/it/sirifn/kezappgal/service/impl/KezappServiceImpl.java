@@ -11,12 +11,12 @@ public class KezappServiceImpl implements KezappService{
 
     @Override
     public RichiediRegistrazioneDto registrazione(RichiediRegistrazioneDto rrdto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
     public InviaMessaggioDto inviaATutti(InviaMessaggioDto iatdto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
