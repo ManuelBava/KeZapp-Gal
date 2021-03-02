@@ -3,20 +3,29 @@ package it.sirifn.kezappgal.service.impl;
 import it.sirifn.kezappgal.dto.InviaMessaggioDto;
 import it.sirifn.kezappgal.dto.RichiediMessaggioDto;
 import it.sirifn.kezappgal.dto.RichiediRegistrazioneDto;
+import it.sirifn.kezappgal.repository.ChatRepository;
+import it.sirifn.kezappgal.repository.MessaggioRepository;
 import org.springframework.stereotype.Service;
 import it.sirifn.kezappgal.service.KezappService;
+import org.springframework.beans.factory.annotation.Autowired;
 
- @Service
-public class KezappServiceImpl implements KezappService{
+@Service
+public class KezappServiceImpl implements KezappService {
+
+    @Autowired
+    ChatRepository chatRepository;
+
+    @Autowired
+    MessaggioRepository messaggioRepository;
 
     @Override
     public RichiediRegistrazioneDto registrazione(RichiediRegistrazioneDto rrdto) {
-         throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public InviaMessaggioDto inviaATutti(InviaMessaggioDto iatdto) {
-         throw new UnsupportedOperationException("Not supported yet."); 
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
@@ -29,6 +38,4 @@ public class KezappServiceImpl implements KezappService{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
-    
 }
