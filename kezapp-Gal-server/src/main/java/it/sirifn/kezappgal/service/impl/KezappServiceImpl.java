@@ -50,7 +50,6 @@ public class KezappServiceImpl implements KezappService {
             chatRepository.save(cx);
             //carico i dati in rRto
             rDto.setSessione(cx.getId().toString());
-            rDto.addChat(cx);
         }
         return rDto;
     }
