@@ -27,11 +27,7 @@ export class AppComponent {
     let ox: Observable<RegistrazioneDto> = this.http.post<RegistrazioneDto>(this.url + "registrazione", reg);
     ox.subscribe(r => {
       this.contatti = r.contatti;
-    })
-    ox.subscribe(r => {
       this.messaggi = r.messaggi;
-    })
-    ox.subscribe(r => {
       this.sessione = r.sessione;
     })
     console.log(this.contatti, this.messaggi, this.sessione);

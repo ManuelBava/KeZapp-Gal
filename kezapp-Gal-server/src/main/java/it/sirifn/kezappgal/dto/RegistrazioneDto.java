@@ -17,8 +17,11 @@ public class RegistrazioneDto {
     private List <Chat> contatti;
     private List <Messaggio> messaggi;
     private String sessione; 
-    public RegistrazioneDto() {
+    
+public RegistrazioneDto() {
     }
+    
+    
 
     public RegistrazioneDto(List<Chat> contatti, List<Messaggio> messaggi, String sessione) {
         this.contatti = contatti;

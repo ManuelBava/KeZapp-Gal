@@ -5,18 +5,20 @@
  */
 package it.sirifn.kezappgal.model;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
+
 
 /**
  *
  * @author manue
  */
 @Entity
-public class Chat {
+public class Chat implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

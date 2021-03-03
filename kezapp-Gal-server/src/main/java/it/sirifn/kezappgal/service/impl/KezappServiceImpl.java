@@ -34,13 +34,14 @@ public class KezappServiceImpl implements KezappService {
         //Controllo se esiste il nickname ricevuto come DTO
 
         //Se il nickname esiste esiste nel DB
-        if (chatRepository.findByNicknameLike(rrdto.getNickname()) != null) {
+        if (chatRepository.findByNickname(rrdto.getNickname()) != null) {
             //Assegna ID dell' utente (rrdto) presente alla sessione locale 
-            // List<Chat> lista = new ArrayList<>();
-            chatRepository.findByNicknameOrderById(cx.getNickname());
+//            // List<Chat> lista = new ArrayList<>();
+//            chatRepository.findByNicknameOrderById(cx.getNickname());
             return rDto;
         } //Se il nickname non esiste viene aggiunto al DB
-        else if (chatRepository.findByNicknameLike(rrdto.getNickname()) == null) {
+        else /*(chatRepository.findByNickname(rrdto.getNickname()) == null) */
+        {
             //Prendo la risposta del db
             cx = chatRepository.save(cx);
             // Prendo id da cx e (string) e lo metto in cx.sessione
@@ -49,9 +50,9 @@ public class KezappServiceImpl implements KezappService {
             //Aggiorno DB
             chatRepository.save(cx);
             //carico i dati in rRto
-            rDto.setSessione(cx.getId().toString());
-        }
+            rDto.setSessione(cx.getSessione());
         return rDto;
+        }
     }
 
     @Override
