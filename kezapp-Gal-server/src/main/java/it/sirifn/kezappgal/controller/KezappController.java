@@ -22,6 +22,7 @@ public class KezappController {
     @RequestMapping("/registrazione")
     @ResponseBody
     public RegistrazioneDto registrazione(@RequestBody RichiediRegistrazioneDto rrdto){
+        
         throw new UnsupportedOperationException("Not supported yet."); 
     }
     

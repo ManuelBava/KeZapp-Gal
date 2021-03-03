@@ -1,6 +1,7 @@
 package it.sirifn.kezappgal.service.impl;
 
 import it.sirifn.kezappgal.dto.InviaMessaggioDto;
+import it.sirifn.kezappgal.dto.RegistrazioneDto;
 import it.sirifn.kezappgal.dto.RichiediMessaggioDto;
 import it.sirifn.kezappgal.dto.RichiediRegistrazioneDto;
 import it.sirifn.kezappgal.model.Chat;
@@ -8,8 +9,6 @@ import it.sirifn.kezappgal.repository.ChatRepository;
 import it.sirifn.kezappgal.repository.MessaggioRepository;
 import org.springframework.stereotype.Service;
 import it.sirifn.kezappgal.service.KezappService;
-import java.util.ArrayList;
-import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
@@ -21,8 +20,13 @@ public class KezappServiceImpl implements KezappService {
     @Autowired
     MessaggioRepository messaggioRepository;
 
+    /**
+     *
+     * @param rrdto
+     * @return
+     */
     @Override
-    public RichiediRegistrazioneDto registrazione(RichiediRegistrazioneDto rrdto) {
+    public RegistrazioneDto registrazione(RichiediRegistrazioneDto rrdto) {
         //se non trova il nickname
         Chat cx = new Chat();
         cx.setNickname(rrdto.getNickname());
@@ -33,15 +37,20 @@ public class KezappServiceImpl implements KezappService {
             //Assegna ID dell' utente (rrdto) presente alla sessione locale 
             // List<Chat> lista = new ArrayList<>();
             chatRepository.findByNicknameOrderById(cx.getNickname());
-            RichiediRegistrazioneDto rDto = new RichiediRegistrazioneDto();
+            RegistrazioneDto rDto = new RegistrazioneDto();
             return rDto;
         } 
         
         //Se il nickname non esiste viene aggiunto al DB
         else if (chatRepository.findByNicknameLike(rrdto.getNickname()) == null) {
+            cx = chatRepository.save(cx);
+            // Prendo id da cx e (string) e lo metto in cx.sessione
+            //aggiorno db con save 
+            String sessione = cx.getId().toString(); 
+            cx.setSessione(sessione);
             chatRepository.save(cx);
         }
-        return rrdto;   
+        return null;   
     }
 
     @Override

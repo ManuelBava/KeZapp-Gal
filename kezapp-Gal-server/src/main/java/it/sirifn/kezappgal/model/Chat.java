@@ -26,6 +26,8 @@ public class Chat {
     private String sessione;
 
     public Chat() {
+        nickname   = "";
+        sessione = "";
     }
 
     public Chat(String nickname, String sessione) {

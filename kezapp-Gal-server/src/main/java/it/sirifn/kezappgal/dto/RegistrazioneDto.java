@@ -16,8 +16,7 @@ import java.util.List;
 public class RegistrazioneDto {
     private List <Chat> contatti;
     private List <Messaggio> messaggi;
-    private String sessione;
-
+    private String sessione; 
     public RegistrazioneDto() {
     }
 
@@ -50,11 +49,18 @@ public class RegistrazioneDto {
     public void setSessione(String sessione) {
         this.sessione = sessione;
     }
-
+    
+    public void addChat (Chat x)
+    {
+        contatti.add(x);
+    }
     @Override
     public String toString() {
         return "RegistrazioneDto{" + "contatti=" + contatti + ", messaggi=" + messaggi + ", sessione=" + sessione + '}';
     }
+    
+    
+    
 
 
 }

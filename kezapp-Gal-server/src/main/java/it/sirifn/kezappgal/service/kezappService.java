@@ -7,12 +7,13 @@
 package it.sirifn.kezappgal.service;
 
 import it.sirifn.kezappgal.dto.InviaMessaggioDto;
+import it.sirifn.kezappgal.dto.RegistrazioneDto;
 import it.sirifn.kezappgal.dto.RichiediMessaggioDto;
 import it.sirifn.kezappgal.dto.RichiediRegistrazioneDto;
 
 public interface KezappService {
 
-   RichiediRegistrazioneDto registrazione(RichiediRegistrazioneDto rrdto);
+   RegistrazioneDto registrazione(RichiediRegistrazioneDto rrdto);
    
    InviaMessaggioDto inviaATutti(InviaMessaggioDto iatdto);
    
