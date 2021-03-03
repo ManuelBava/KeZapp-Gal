@@ -26,6 +26,7 @@ public class KezappServiceImpl implements KezappService {
         //se non trova il nickname
         Chat cx = new Chat();
         cx.setNickname(rrdto.getNickname());
+        //Controllo se esiste il nickname ricevuto come DTO
 
         //Se il nickname esiste esiste nel DB
         if (chatRepository.findByNicknameLike(rrdto.getNickname()) != null) {
@@ -39,10 +40,8 @@ public class KezappServiceImpl implements KezappService {
                     -----
                     -----
              */
-            
-        } //Controllo se esiste il nickname ricevuto come DTO
+        } //Se il nickname non esiste viene aggiunto al DB
         else if (chatRepository.findByNicknameLike(rrdto.getNickname()) == null) {
-            //Se il nickname non esiste viene aggiunto al DB
             chatRepository.save(cx);
         }
 
