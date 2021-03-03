@@ -1,2 +1,2 @@
 # KeZapp-Gal
-https://meet.google.com/ppi-ertp-jhf
+https://meet.google.com/zaa-ikzd-xwx
