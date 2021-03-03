@@ -31,21 +31,17 @@ public class KezappServiceImpl implements KezappService {
         //Se il nickname esiste esiste nel DB
         if (chatRepository.findByNicknameLike(rrdto.getNickname()) != null) {
             //Assegna ID dell' utente (rrdto) presente alla sessione locale 
-            List<Chat> lista = new ArrayList<>();
-            lista = chatRepository.findByNicknameOrderById(cx.getNickname());
-
-            /*                   
-                    -----
-                    -----
-                    -----
-                    -----
-             */
-        } //Se il nickname non esiste viene aggiunto al DB
+            // List<Chat> lista = new ArrayList<>();
+            chatRepository.findByNicknameOrderById(cx.getNickname());
+            RichiediRegistrazioneDto rDto = new RichiediRegistrazioneDto();
+            return rDto;
+        } 
+        
+        //Se il nickname non esiste viene aggiunto al DB
         else if (chatRepository.findByNicknameLike(rrdto.getNickname()) == null) {
             chatRepository.save(cx);
         }
-
-        return null;
+        return rrdto;   
     }
 
     @Override
