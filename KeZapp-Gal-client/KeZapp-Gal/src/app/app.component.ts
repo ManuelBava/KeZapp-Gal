@@ -22,6 +22,7 @@ export class AppComponent {
   registra() {
     // metto il nickname dentro il dto
     this.reg.nickname = this.nickname;
+    this.reg = new RichiediRegistrazioneDto();
     //preparo la richiesta post verso il server
     let ox: Observable<RegistrazioneDto> = this.http
       .post<RegistrazioneDto>(this.url + "registrazione", this.reg);

@@ -28,8 +28,8 @@ public class Chat implements Serializable  {
     private String sessione;
 
     public Chat() {
-        nickname   = "";
-        sessione = "";
+        //nickname   = "";
+        //sessione = "";
     }
 
     public Chat(String nickname, String sessione) {
