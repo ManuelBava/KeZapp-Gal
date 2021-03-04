@@ -34,7 +34,7 @@ public class KezappServiceImpl implements KezappService21 {
         //Controllo se esiste il nickname ricevuto come DTO
 
         //Se il nickname esiste esiste nel DB
-        if (chatRepository.findByNickname(rrdto.getNickname()) != null) {
+        if (chatRepository.findByNickname(rrdto.getNickname()).isEmpty()) {
             //Assegna ID dell' utente (rrdto) presente alla sessione locale 
 //            // List<Chat> lista = new ArrayList<>();
 //            chatRepository.findByNicknameOrderById(cx.getNickname());
