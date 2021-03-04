@@ -7,12 +7,12 @@ import it.sirifn.kezappgal.dto.RichiediRegistrazioneDto;
 import it.sirifn.kezappgal.model.Chat;
 import it.sirifn.kezappgal.repository.ChatRepository;
 import it.sirifn.kezappgal.repository.MessaggioRepository;
+import it.sirifn.kezappgal.service.KezappService21;
 import org.springframework.stereotype.Service;
-import it.sirifn.kezappgal.service.KezappService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
-public class KezappServiceImpl implements KezappService {
+public class KezappServiceImpl implements KezappService21 {
 
     @Autowired
     ChatRepository chatRepository;

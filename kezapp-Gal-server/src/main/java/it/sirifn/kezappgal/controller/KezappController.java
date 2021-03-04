@@ -4,7 +4,7 @@ import it.sirifn.kezappgal.dto.InviaMessaggioDto;
 import it.sirifn.kezappgal.dto.RegistrazioneDto;
 import it.sirifn.kezappgal.dto.RichiediMessaggioDto;
 import it.sirifn.kezappgal.dto.RichiediRegistrazioneDto;
-import it.sirifn.kezappgal.service.KezappService;
+import it.sirifn.kezappgal.service.KezappService21;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class KezappController {
 
     @Autowired
-    KezappService kezappService;
+    KezappService21 kezappService;
 
     @RequestMapping("/registrazione")
     @ResponseBody

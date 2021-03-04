@@ -11,7 +11,7 @@ import it.sirifn.kezappgal.dto.RegistrazioneDto;
 import it.sirifn.kezappgal.dto.RichiediMessaggioDto;
 import it.sirifn.kezappgal.dto.RichiediRegistrazioneDto;
 
-public interface KezappService {
+public interface KezappService21 {
 
    RegistrazioneDto registrazione(RichiediRegistrazioneDto rrdto);
    
