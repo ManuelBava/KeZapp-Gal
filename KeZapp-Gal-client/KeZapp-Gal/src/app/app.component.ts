@@ -17,15 +17,14 @@ export class AppComponent {
   messaggi: Messaggio[] = [];
   sessione: string;
   constructor(private http: HttpClient) { }
-
+  reg: RichiediRegistrazioneDto = new RichiediRegistrazioneDto();
 
   registra() {
     // metto il nickname dentro il dto
-    let reg = new RichiediRegistrazioneDto();
-    reg.nickname = this.nickname;
+    this.reg.nickname = this.nickname;
     //preparo la richiesta post verso il server
     let ox: Observable<RegistrazioneDto> = this.http
-      .post<RegistrazioneDto>(this.url + "registrazione", reg);
+      .post<RegistrazioneDto>(this.url + "registrazione", this.reg);
     ox.subscribe(r => {
       this.contatti = r.contatti;
       this.messaggi = r.messaggi;
