@@ -256,3 +256,13 @@ Caused by: com.mysql.cj.exceptions.CJException: You have an error in your SQL sy
 	... 50 common frames omitted
 
 2021-03-04 10:40:06.060  WARN 4108 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-04 11:35:32.858  WARN 4336 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-04 11:40:00.868 DEBUG 4248 --- [main] org.hibernate.SQL                        : create table chat (id bigint not null, nickname varchar(255), sessione varchar(255), primary key (id)) engine=InnoDB
+2021-03-04 11:40:00.947 DEBUG 4248 --- [main] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=InnoDB
+2021-03-04 11:40:01.021 DEBUG 4248 --- [main] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2021-03-04 11:40:01.025 DEBUG 4248 --- [main] org.hibernate.SQL                        : create table messaggio (id bigint not null, alias_destinatario varchar(255), alias_mittente varchar(255), testo varchar(255), primary key (id)) engine=InnoDB
+2021-03-04 11:40:01.923  WARN 4248 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-04 11:40:11.946 DEBUG 4248 --- [http-nio-8080-exec-2] org.hibernate.SQL                        : select chat0_.id as id1_0_, chat0_.nickname as nickname2_0_, chat0_.sessione as sessione3_0_ from chat chat0_ where chat0_.nickname=?
+2021-03-04 11:40:11.950 TRACE 4248 --- [http-nio-8080-exec-2] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sdfsdf]
+2021-03-04 11:40:15.015 DEBUG 4248 --- [http-nio-8080-exec-3] org.hibernate.SQL                        : select chat0_.id as id1_0_, chat0_.nickname as nickname2_0_, chat0_.sessione as sessione3_0_ from chat chat0_ where chat0_.nickname=?
+2021-03-04 11:40:15.017 TRACE 4248 --- [http-nio-8080-exec-3] o.h.type.descriptor.sql.BasicBinder      : binding parameter [1] as [VARCHAR] - [sdfsdfs]

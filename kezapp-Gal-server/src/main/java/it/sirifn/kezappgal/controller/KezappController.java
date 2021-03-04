@@ -27,6 +27,11 @@ public class KezappController {
         return reg;
     }
 
+    @RequestMapping("/test")
+    public void registrazione() {
+        System.out.println("Test eseguito con successo");
+    }
+
     @RequestMapping("/invio-a-tutti")
     @ResponseBody
     public InviaMessaggioDto inviaATutti(@RequestBody InviaMessaggioDto iatdto) {

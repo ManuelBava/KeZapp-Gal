@@ -24,14 +24,15 @@ export class AppComponent {
     let reg = new RichiediRegistrazioneDto();
     reg.nickname = this.nickname;
     //preparo la richiesta post verso il server
-    let ox: Observable<RegistrazioneDto> = this.http.post<RegistrazioneDto>(this.url + "registrazione", reg);
+    let ox: Observable<RegistrazioneDto> = this.http
+      .post<RegistrazioneDto>(this.url + "registrazione", reg);
     ox.subscribe(r => {
       this.contatti = r.contatti;
       this.messaggi = r.messaggi;
       this.sessione = r.sessione;
     })
     console.log(this.contatti, this.messaggi, this.sessione);
-    
+
   }
 
   inviaATutti() {

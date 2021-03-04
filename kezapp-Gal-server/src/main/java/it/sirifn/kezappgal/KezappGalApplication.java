@@ -8,11 +8,11 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 // Dice a Spring dove cercare i vari componenti da iniettare con @Autowired
-@ComponentScan(basePackages = {"it.sirfin.kezappgal"})
+@ComponentScan(basePackages = {"it.sirifn.kezappgal"})
 // Dice a Spring dove cercare i vari componenti da iniettare con @Autowired
-@EnableJpaRepositories(basePackages = {"it.sirfin.kezappgal.repository"})
+@EnableJpaRepositories(basePackages = {"it.sirifn.kezappgal.repository"})
 // Dice a Spring dove trovare le entità
-@EntityScan(basePackages = {"it.sirfin.kezappgal.model"})
+@EntityScan(basePackages = {"it.sirifn.kezappgal.model"})
 public class KezappGalApplication {
 
     public static void main(String[] args) {
